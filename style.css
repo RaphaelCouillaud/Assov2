@@ -520,7 +520,7 @@ padding: 25px 0;
   margin: 0 auto;
   text-align: center;
    width: 100%; 
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Pirata One', Helvetica, Arial, sans-serif;
     padding-bottom: 25px;
 }
@@ -564,13 +564,13 @@ align-items: center;
    border: 3px solid white;
 }
 .visible-pannel h2 {
-    margin-left: 25px;
+    
     padding: 15px 5px;
     font-size: 2.25em;
    
     display: flex;
         margin: auto;
-  text-align: center;
+  text-align: justify-all;
    width: 100%; 
    color: white;
    align-items: center;
@@ -617,6 +617,10 @@ align-items: center;
 }
 .visible-pannel h2 .fa-bolt{
   color: gold;
+  -webkit-text-stroke: 2px black;
+}
+.visible-pannel h2 .fa-users{
+  color: white;
   -webkit-text-stroke: 2px black;
 }
 .visible-pannel img {
@@ -742,7 +746,7 @@ box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 100px 100px rgba(0, 0, 0, 0.1);
         rgba(8, 140, 140, 1), 
         rgba(8, 140, 140, 0.5)
       ), url("img/background.png");  
-    /*box-shadow: inset 0 30px 15px -8px rgba(185, 217, 235, 0.5);*/
+   box-shadow: inset 0 60px 30px -15px rgba(0, 0, 0, 0.85);
     padding-top: 50px;
 }
 #bilancounter h2 {
@@ -1928,7 +1932,7 @@ backdrop-filter: blur( 4px );
 #bandeau div:nth-child(3) {
   background: #EF4135;
 }
-#mairies, #prives {
+#mairies{
   position: relative;   
   display: flex;
   flex-direction: row;  
@@ -1938,6 +1942,20 @@ backdrop-filter: blur( 4px );
   align-items: center;
   background: white;
   color: black;
+}
+ #prives {
+  position: relative;   
+  display: flex;
+  flex-direction: row-reverse;  
+  justify-content: space-evenly;  
+  max-width: 100%;
+  padding: 0 20px;
+  align-items: center;
+  background-size: cover;
+background-attachment: fixed;
+background-repeat: repeat;
+background-position: top center;
+  
 }
 #intromairies, #introprives {
   width: 25%;
@@ -1949,43 +1967,47 @@ backdrop-filter: blur( 4px );
   /* writing-mode: vertical-rl;
 text-orientation: upright;*/
 }
-#intromairies h2, #introprives h2{  
+#intromairies h2{  
   font-family: 'Pirata One', Helvetica, Arial, sans-serif;
- font-size: 4em;
+ font-size: 3em;
   color: black;
   width: 100%;
 }
+#introprives h2{  
+  font-family: 'Pirata One', Helvetica, Arial, sans-serif;
+ font-size: 3em;
+  color: white;
+  width: 100%;
+}
 #divmairies, #divprives{
-  width: auto;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .linksmairies, .linksprives {
-  width: 10%;
-   height: 200px;
+  width: 20%;
+   height: auto;
   display: flex;
   flex-direction: column;
    justify-content: space-evenly;
   position: relative;
   text-align: center;
   align-items: center;  
-  margin: auto;
+  margin: 5px auto;
 }
 .linksmairies a, .linksprives a {
-  margin: auto;  
-  width: 100%;
-  height: 100%;
+  margin: auto;   
   object-fit: cover;
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img{
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
   margin: auto;
-  text-align: center;
-  width: 100%;
+  text-align: center; 
+  width: 150px;
   object-fit: cover;
 } 
-.linksmairies a:hover, .inksprives a:hover{
+.linksmairies a:hover, .linksprives a:hover{
  transform: scale(1.1);
  transition: all 0.35s ease-in-out; 
 }
@@ -2451,8 +2473,7 @@ min-height: 80vh;
 #sensibilisation2 {
   background: linear-gradient(
         rgba(120, 228, 228, 0.9), 
-        rgba(80, 196, 92, 0.9)
-         ), url("img/background.png"); 
+        rgba(80, 196, 92, 0.9) 
       );
 }
 #sensibilisation3 {
@@ -2566,7 +2587,11 @@ min-height: 80vh;
   bottom: 50px;
    opacity: 0;
  visibility: hidden;
- background: rgba(0, 0, 0, 0.85);
+ background: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.85)
+         ), url("img/background.png"); 
+      );
  padding: 20px;
  color: white;
  transform: translateY(100%);
@@ -3153,6 +3178,9 @@ width: 100%;
   left: 250px;
   right: 250px;
   bottom: 50px;  
+}
+#adhesionrow3 {  
+    width: 70%;
 }
 }
 /*------------------------------------------------------1024----------------*/
@@ -3817,6 +3845,15 @@ text-orientation: upright;*/
 .articlepresse i {
  font-size: 60px;
 }
+#divmairies, #divprives {
+  width: 100%; 
+}
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+  margin: auto;
+  text-align: center; 
+  width: 100px;
+  object-fit: cover;
+} 
 /*///////////////////VIDEO///////////////////////////////////////////*/
 #sectiontv {
     flex-direction: column;  
@@ -3900,6 +3937,9 @@ background-attachment: fixed;
 }
 #breakingnews img { 
   left: 15%;
+}
+#adhesionrow1, #adhesionrow2, #adhesionrow3, #adhesionrow4 {  
+    width: 75%;
 }
 .imginbox.activeimg img {
   
@@ -4027,6 +4067,9 @@ max-width: 100%;
     min-width: 480px;
    
 }
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img{  
+  min-width: 70px;
+} 
 }
 /*------------------------------------------------------480---------------*/
 /*--------------------------------------------------------------------------*/
@@ -4153,6 +4196,12 @@ figure {
 #introtemoignages {
   width: 90%;
 }
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+  margin: auto;
+  text-align: center; 
+  width: 75px;
+  object-fit: cover;
+} 
 .earth {  
   width: 175px;
   height: 175px;  
@@ -4175,6 +4224,9 @@ figure {
   left: 20%;  
   width: auto;
   height: 80px;  
+}
+#adhesionrow1, #adhesionrow2, #adhesionrow3, #adhesionrow4 {
+    width: 90%;
 }
 form p {
     padding: 0 5px;
@@ -4306,6 +4358,12 @@ figure {
 .middle-faq {
   width: 90%;
 }
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+  margin: auto;
+  text-align: center; 
+  width: 60px;
+  object-fit: cover;
+} 
 .slidenav {    
     bottom: 5px;
 }
@@ -4375,7 +4433,12 @@ form h2 {
   .op-text h3, .op-text p {
     padding-top: 25px;
   }
-
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+  margin: auto;
+  text-align: center; 
+  width: 40px;
+  object-fit: cover;
+} 
 }
 /*------------------------------------------------------320---------------*/
 /*--------------------------------------------------------------------------*/
