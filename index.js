@@ -1,1 +1,255 @@
-let header=document.getElementById("header"),text=document.getElementById("text"),bird1=document.getElementById("bird1"),bird2=document.getElementById("bird2"),butterflies=document.getElementById("butterflies"),butterflies1=document.getElementById("butterflies1"),cloud1=document.getElementById("cloud1"),cloud2=document.getElementById("cloud2"),sun=document.getElementById("sun"),back=document.getElementById("back"),actioncounter=document.getElementById("actioncounter"),plants=document.getElementById("plants"),turtle=document.getElementById("turtle"),fish=document.getElementById("fish"),piles1=document.getElementById("piles1"),piles2=document.getElementById("piles2"),water=document.getElementById("water"),watermedia=document.getElementById("watermedia");window.addEventListener("scroll",()=>{let e=window.scrollY;header.style.top=-.5*e+"px",text.style.top=50+-.5*e+"%",bird1.style.top=-1.5*e+"px",bird1.style.left=-2*e+"px",bird2.style.top=-1.5*e+"px",bird2.style.left=5*e+"px",butterflies.style.top=-1*e+"px",butterflies.style.left=1*e+"px",butterflies1.style.top=-1.02*e+"px",butterflies1.style.left=1.025*e+"px",cloud1.style.left=-2*e+"px",cloud2.style.left=5*e+"px",sun.style.left=-.5*e+"px",sun.style.top=.25*e+"px",actioncounter.style.marginTop=-.025*e+"px",back.style.top=-.15*e+"px",plants.style.top=.025*e+"px",fish.style.left=.55*e+"px",turtle.style.left=-.5*e+"px",piles1.style.left=-3*e+"px",piles2.style.left=3*e+"px"});let textphone=document.getElementById("textphone"),bird1phone=document.getElementById("bird1phone"),bird2phone=document.getElementById("bird2phone"),cloudphone=document.getElementById("cloudphone"),sunphone=document.getElementById("sunphone"),backphone=document.getElementById("backphone"),plantsphone=document.getElementById("plantsphone"),turtlephone=document.getElementById("turtlephone"),fishphone=document.getElementById("fishphone"),piles1phone=document.getElementById("piles1phone"),piles2phone=document.getElementById("piles2phone"),waterphone=document.getElementById("waterphone");window.addEventListener("scroll",()=>{let e=window.scrollY;textphone.style.top=20+-.5*e+"%",bird1phone.style.top=-1.5*e+"px",bird1phone.style.left=-2*e+"px",bird2phone.style.top=-1.5*e+"px",bird2phone.style.left=5*e+"px",cloudphone.style.left=-1*e+"px",sunphone.style.left=.5*e+"px",sunphone.style.top=.25*e+"px",backphone.style.top=-.15*e+"px",plantsphone.style.top=.025*e+"px",fishphone.style.left=.5*e+"px",turtlephone.style.left=-.5*e+"px",piles1phone.style.left=-3*e+"px",piles2phone.style.left=3*e+"px"});const menuAnim=document.querySelector(".menu-toggle");let openMenu=!1;menuAnim.addEventListener("click",()=>{openMenu?(menuAnim.classList.remove("open"),openMenu=!1):(menuAnim.classList.add("open"),openMenu=!0)});let countDate=new Date("September 18, 2021 10:00:00").getTime();function newYear(){let e=(new Date).getTime(),t=countDate-e,o=Math.floor(t/864e5),n=Math.floor(t%864e5/36e5),l=Math.floor(t%36e5/6e4),s=Math.floor(t%6e4/1e3);document.getElementById("days").innerText=o,document.getElementById("hours").innerText=n,document.getElementById("minutes").innerText=l,document.getElementById("seconds").innerText=s}setInterval(function(){newYear()},1e3);const show1=document.getElementById("op-1"),show2=document.getElementById("op-2"),show3=document.getElementById("op-3"),show4=document.getElementById("op-4"),opText1=document.getElementById("op-1-text"),opText2=document.getElementById("op-2-text"),opText3=document.getElementById("op-3-text"),opText4=document.getElementById("op-4-text");show1.onclick=function(){opText1.style.display="block",opText2.style.display="none",opText3.style.display="none",opText4.style.display="none",show1.style.borderBottom="5px solid white",show2.style.borderBottom="none",show3.style.borderBottom="none",show4.style.borderBottom="none",show1.style.opacity="1",show2.style.opacity="0.7",show3.style.opacity="0.7",show4.style.opacity="0.7"},show2.onclick=function(){opText1.style.display="none",opText2.style.display="block",opText3.style.display="none",opText4.style.display="none",show1.style.borderBottom="none",show2.style.borderBottom="5px solid white",show3.style.borderBottom="none",show4.style.borderBottom="none",show1.style.opacity="0.7",show2.style.opacity="1",show3.style.opacity="0.7",show4.style.opacity="0.7"},show3.onclick=function(){opText1.style.display="none",opText2.style.display="none",opText3.style.display="block",opText4.style.display="none",show1.style.borderBottom="none",show2.style.borderBottom="none",show3.style.borderBottom="5px solid white",show4.style.borderBottom="none",show1.style.opacity="0.7",show2.style.opacity="0.7",show3.style.opacity="1",show4.style.opacity="0.7"},show4.onclick=function(){opText1.style.display="none",opText2.style.display="none",opText3.style.display="none",opText4.style.display="block",show1.style.borderBottom="none",show2.style.borderBottom="none",show3.style.borderBottom="none",show4.style.borderBottom="5px solid white",show1.style.opacity="0.7",show2.style.opacity="0.7",show3.style.opacity="0.7",show4.style.opacity="1"};const ratio=.1,options={root:null,rootMargin:"0px",threshold:.1},handleIntersect=function(e,t){e.forEach(function(e){e.intersectionRatio>.1&&(e.target.classList.add("reveal-visible"),t.unobserve(e.target))})},observerIntersect=new IntersectionObserver(handleIntersect,options);document.querySelectorAll('[class*="reveal-"]').forEach(function(e){observerIntersect.observe(e)});var counted=0;$(window).scroll(function(){var e=$("#counter-up").offset().top-window.innerHeight;0==counted&&$(window).scrollTop()>e&&($(".numbercounter").each(function(){var e=$(this),t=e.attr("data-count");$({countNum:e.text()}).animate({countNum:t},{duration:2e3,easing:"swing",step:function(){e.text(Math.floor(this.countNum))},complete:function(){e.text(this.countNum)}})}),counted=1)});const toTop=document.querySelector(".to-top");window.addEventListener("scroll",()=>{window.pageYOffset>600?toTop.classList.add("up"):toTop.classList.remove("up")});
+// PARALLAX SCROLL HEADER //
+let header = document.getElementById('header');
+let text = document.getElementById('text');
+let bird1 = document.getElementById('bird1');
+let bird2 = document.getElementById('bird2');
+let butterflies = document.getElementById('butterflies');
+let butterflies1 = document.getElementById('butterflies1');
+let cloud1 = document.getElementById('cloud1');
+let cloud2 = document.getElementById('cloud2');
+let sun = document.getElementById('sun');
+let back = document.getElementById('back');
+let actioncounter = document.getElementById('actioncounter');
+let plants = document.getElementById('plants');
+let turtle = document.getElementById('turtle');
+let fish = document.getElementById('fish');
+let piles1 = document.getElementById('piles1');
+let piles2 = document.getElementById('piles2');
+let water = document.getElementById('water');
+let watermedia = document.getElementById('watermedia');
+
+window.addEventListener('scroll', () => {
+ let value = window.scrollY;
+ header.style.top = value * -0.5 + 'px';
+ text.style.top = 50 + value * -0.5 + '%';
+ bird1.style.top = value * -1.5 + 'px';
+ bird1.style.left = value * -2 + 'px';
+ bird2.style.top = value * -1.5 + 'px';
+ bird2.style.left = value * 5 + 'px';
+ butterflies.style.top = value * -1 + 'px';
+ butterflies.style.left = value * 1 + 'px';
+ butterflies1.style.top = value * -1.02 + 'px';
+ butterflies1.style.left = value * 1.025 + 'px';
+ cloud1.style.left = value * -2 + 'px';
+ cloud2.style.left = value * 5 + 'px';
+ sun.style.left = value * -0.5 + 'px';
+ sun.style.top = value * 0.25 + 'px';
+ actioncounter.style.marginTop = value * -0.025 + 'px';
+ back.style.top = value * -0.15 + 'px';
+ plants.style.top = value * 0.025 + 'px';
+ fish.style.left = value * 0.55 + 'px';
+ turtle.style.left = value * -0.5 + 'px';
+ piles1.style.left = value * -3 + 'px';
+ piles2.style.left = value * 3 + 'px'; 
+ });
+// PARALLAX PORTRAIT SCROLL HEADER //
+
+let textphone = document.getElementById('textphone');
+let bird1phone = document.getElementById('bird1phone');
+let bird2phone = document.getElementById('bird2phone');
+
+let cloudphone = document.getElementById('cloudphone');
+
+let sunphone = document.getElementById('sunphone');
+let backphone = document.getElementById('backphone');
+
+let plantsphone = document.getElementById('plantsphone');
+let turtlephone = document.getElementById('turtlephone');
+let fishphone = document.getElementById('fishphone');
+let piles1phone = document.getElementById('piles1phone');
+let piles2phone = document.getElementById('piles2phone');
+let waterphone = document.getElementById('waterphone');
+
+window.addEventListener('scroll', () => {
+ let valuephone = window.scrollY;
+ 
+ textphone.style.top = 20 + valuephone * -0.5 + '%';
+ bird1phone.style.top = valuephone * -1.5 + 'px';
+ bird1phone.style.left = valuephone * -2 + 'px';
+ bird2phone.style.top = valuephone * -1.5 + 'px';
+ bird2phone.style.left = valuephone * 5 + 'px'; 
+ cloudphone.style.left = valuephone * -1 + 'px'; 
+ sunphone.style.left = valuephone * 0.5 + 'px';
+ sunphone.style.top = valuephone * 0.25 + 'px'; 
+ backphone.style.top = valuephone * -0.15 + 'px';
+ plantsphone.style.top = valuephone * 0.025 + 'px';
+ fishphone.style.left = valuephone * 0.5 + 'px';
+ turtlephone.style.left = valuephone * -0.5 + 'px';
+ piles1phone.style.left = valuephone * -3 + 'px';
+ piles2phone.style.left = valuephone * 3 + 'px'; 
+ });
+
+//MENU BURGER ANIMATION //
+const menuAnim = document.querySelector('.menu-toggle');
+let openMenu = false;
+menuAnim.addEventListener('click', () => {
+	if(!openMenu) {
+		menuAnim.classList.add('open');
+		openMenu = true;
+	} else {
+		menuAnim.classList.remove('open');
+		openMenu = false;
+	}
+});
+
+//COUNTDOWN//////////////////////////////////////////////////////////
+let countDate = new Date('September 18, 2021 10:00:00').getTime();
+function newYear(){
+	let currentTime = new Date().getTime();
+	let gapTime = countDate - currentTime;
+		let seconds = 1000;
+		let minutes = seconds * 60;
+		let hours = minutes * 60;
+		let days = hours * 24;
+
+	let daysCount = Math.floor(gapTime / (days));
+	let hoursCount = Math.floor((gapTime % (days)) / (hours));
+	let minutesCount = Math.floor((gapTime % (hours)) / (minutes));
+	let secondsCount = Math.floor((gapTime % (minutes)) / seconds);
+
+	document.getElementById('days').innerText = daysCount;
+	document.getElementById('hours').innerText = hoursCount;
+	document.getElementById('minutes').innerText = minutesCount;
+	document.getElementById('seconds').innerText = secondsCount;
+}
+setInterval (function(){
+	newYear();
+},1000);
+
+// HIDE SHOW DIV //
+const show1 = document.getElementById('op-1');
+const show2 = document.getElementById('op-2');
+const show3 = document.getElementById('op-3');
+const show4 = document.getElementById('op-4');
+const opText1 = document.getElementById('op-1-text');
+const opText2 = document.getElementById('op-2-text');
+const opText3 = document.getElementById('op-3-text');
+const opText4 = document.getElementById('op-4-text');
+
+show1.onclick = function(){
+	opText1.style.display = "block";
+	opText2.style.display = "none";
+	opText3.style.display = "none";
+	opText4.style.display = "none";
+	show1.style.borderBottom = "5px solid white";
+	show2.style.borderBottom = "none";
+	show3.style.borderBottom = "none";
+	show4.style.borderBottom = "none";
+	show1.style.opacity = "1";
+	show2.style.opacity = "0.7";
+	show3.style.opacity = "0.7";
+	show4.style.opacity = "0.7";
+
+}
+show2.onclick = function(){
+	opText1.style.display = "none";
+	opText2.style.display = "block";
+	opText3.style.display = "none";
+	opText4.style.display = "none";
+	show1.style.borderBottom = "none";
+	show2.style.borderBottom = "5px solid white";
+	show3.style.borderBottom = "none";
+	show4.style.borderBottom = "none";
+	show1.style.opacity = "0.7";
+	show2.style.opacity = "1";
+	show3.style.opacity = "0.7";
+	show4.style.opacity = "0.7";
+}
+show3.onclick = function(){
+	opText1.style.display = "none";
+	opText2.style.display = "none";
+	opText3.style.display = "block";
+	opText4.style.display = "none";
+	show1.style.borderBottom = "none";
+	show2.style.borderBottom = "none";
+	show3.style.borderBottom = "5px solid white";
+	show4.style.borderBottom = "none";
+	show1.style.opacity = "0.7";
+	show2.style.opacity = "0.7";
+	show3.style.opacity = "1";
+	show4.style.opacity = "0.7";
+}
+show4.onclick = function(){
+	opText1.style.display = "none";
+	opText2.style.display = "none";
+	opText3.style.display = "none";
+	opText4.style.display = "block";
+	show1.style.borderBottom = "none";
+	show2.style.borderBottom = "none";
+	show3.style.borderBottom = "none";
+	show4.style.borderBottom = "5px solid white";
+	show1.style.opacity = "0.7";
+	show2.style.opacity = "0.7";
+	show3.style.opacity = "0.7";
+	show4.style.opacity = "1";
+};
+
+
+////////////////////////////////////////////////////////////////////////////
+//INTERSECTION OBSERVER hori//
+const ratio = 0.1
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: ratio
+}
+const handleIntersect = function (entries, observer) {
+	entries.forEach(function (entry) {
+		if (entry.intersectionRatio > ratio) {
+			entry.target.classList.add('reveal-visible')
+			observer.unobserve(entry.target)			
+		}
+		})
+}
+const observerIntersect = new IntersectionObserver(handleIntersect, options);
+document.querySelectorAll('[class*="reveal-"]').forEach(function (revealTitle) {
+	observerIntersect.observe(revealTitle)
+})
+///////////////////////////////////////////////////////////////
+var counted = 0;
+$(window).scroll(function() {
+
+  var oTop = $('#counter-up').offset().top - window.innerHeight;
+  if (counted == 0 && $(window).scrollTop() > oTop) {
+    $('.numbercounter').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    counted = 1;
+  }
+
+});
+
+
+// SCROLL TO TOP //
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  
+if (window.pageYOffset > 600) {
+toTop.classList.add("up");
+} else {
+toTop.classList.remove("up");
+}
+})
+//////////////////////////////////////////////////////////////////////////////////////
+
