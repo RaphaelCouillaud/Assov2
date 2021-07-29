@@ -243,13 +243,13 @@ background-position: top center;
   left: 50%;
   transform: translate(-50%, -50%);
   text-decoration: none;
-  /*display: inline-block;*/
+  display: inline-block;
   padding: 8px 10px; 
   color: white; 
 border-radius: 30px; 
   z-index: 10000;
-  /*display: flex;*/
-  display: none;
+  display: flex;
+  /*display: none;*/
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -742,10 +742,13 @@ box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 100px 100px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   padding-top: 25px;
-    background-image: linear-gradient(
-        rgba(8, 140, 140, 1), 
-        rgba(8, 140, 140, 0.5)
-      ), url("img/background.png");  
+   background-image: none;
+  background: linear-gradient(
+        rgba(8, 92, 116, 1), 
+        rgba(185, 217, 235, 0)
+      );
+background-size: contain;
+background-repeat: repeat;
    box-shadow: inset 0 60px 30px -15px rgba(0, 0, 0, 0.85);
     padding-top: 50px;
 }
@@ -1805,7 +1808,6 @@ padding: 50px 0;
   align-content: center;
    font-family: 'Pirata One', Helvetica, Arial, sans-serif;
    margin: auto;
-   border: 3px solid red;
 }
 .middle-faq i {
   font-size: 6em;
@@ -1825,7 +1827,6 @@ padding: 50px 0;
 .middle-faq h1 {
   writing-mode: vertical-rl;
 text-orientation: upright;
-border: 3px solid green;
 }
 
 .middle-faq h1 span {
@@ -1834,7 +1835,6 @@ border: 3px solid green;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.5px black;
-  border: 3px solid white;
 }
 
 .questions-faq {
@@ -1963,7 +1963,7 @@ background-image: linear-gradient(
       ), url("img/background.png");
 background-size: contain;
 background-attachment: fixed;
-background-repeat: repeat;*/ 
+background-repeat: repeat;
 }
  #associatifs {
   position: relative;   
@@ -2020,10 +2020,10 @@ text-orientation: upright;*/
   margin: 5px auto;
 }
 .linksmairies a, .linksprives a, .linksassociatifs a {
-  margin: auto;   
+  margin: 5px auto;   
   object-fit: cover;
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img{
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img {
   margin: auto;
   text-align: center; 
   width: 150px;
@@ -3798,13 +3798,14 @@ text-orientation: upright;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
-  color: #085c74;    
+  color: black;    
     margin: auto;
     text-align: center;
     text-shadow: -0.25px 0 0.25px #085c74, 0 0.25px 0.25px #085c74, 0.25px 0 0.25px #085c74, 0 -0.25px 1px #085c74;
 }
 .questions-faq p {
   margin: 5px 15px;
+  color: black;
 }
 .answers-faq {
   width: 70%;
@@ -3813,13 +3814,15 @@ text-orientation: upright;
   display: flex;
   font-size: 1.5em;
   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 100px 100px rgba(0, 0, 0, 0.1);  
-  background: rgba( 255, 255, 255, 0.25 );
-/*mix-blend-mode: hard-light;*/
+   background-image: linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(8, 92, 116, 0.75)
+      ), url("img/background.png"); 
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
 }
 .answers-faq p {
- color: #085c74;
+ color: white;
  font-weight: bolder;
 }
 
@@ -3903,10 +3906,10 @@ text-orientation: upright;*/
 .articlepresse i {
  font-size: 60px;
 }
-#divmairies, #divprives {
+#divmairies, #divprives, #divassociatifs {
   width: 100%; 
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img {
   margin: auto;
   text-align: center; 
   width: 100px;
@@ -4125,7 +4128,7 @@ max-width: 100%;
     min-width: 480px;
    
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img{  
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img{  
   min-width: 70px;
 } 
 }
@@ -4254,7 +4257,7 @@ figure {
 #introtemoignages {
   width: 90%;
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img {
   margin: auto;
   text-align: center; 
   width: 75px;
@@ -4416,7 +4419,7 @@ figure {
 .middle-faq {
   width: 90%;
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img , .linksassociatifs h3, .linksassociatifs img{
   margin: auto;
   text-align: center; 
   width: 60px;
@@ -4491,7 +4494,7 @@ form h2 {
   .op-text h3, .op-text p {
     padding-top: 25px;
   }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img {
   margin: auto;
   text-align: center; 
   width: 40px;
