@@ -243,13 +243,13 @@ background-position: top center;
   left: 50%;
   transform: translate(-50%, -50%);
   text-decoration: none;
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 8px 10px; 
   color: white; 
 border-radius: 30px; 
   z-index: 10000;
-  display: flex;
-  /*display: none;*/
+  /*display: flex;*/
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -1805,10 +1805,10 @@ padding: 50px 0;
   align-content: center;
    font-family: 'Pirata One', Helvetica, Arial, sans-serif;
    margin: auto;
-
+   border: 3px solid red;
 }
 .middle-faq i {
-  font-size: 7em;
+  font-size: 6em;
   font-weight: lighter;
   margin: auto;
 }
@@ -1825,14 +1825,16 @@ padding: 50px 0;
 .middle-faq h1 {
   writing-mode: vertical-rl;
 text-orientation: upright;
+border: 3px solid green;
 }
 
 .middle-faq h1 span {
-  font-size: 5em;
+  font-size: 3.5em;
   background: -webkit-linear-gradient(black, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.5px black;
+  border: 3px solid white;
 }
 
 .questions-faq {
@@ -1949,12 +1951,19 @@ backdrop-filter: blur( 4px );
   flex-direction: row-reverse;  
   justify-content: space-evenly;  
   max-width: 100%;
-  padding: 0 20px;
+  padding: 50px 20px;
   align-items: center;
   background-size: cover;
 background-attachment: fixed;
 background-repeat: repeat;
-background-position: top center;  
+background-position: top center; 
+background-image: linear-gradient(
+          rgba(8, 92, 116, 1), 
+        rgba(255, 255, 255, 0.25)
+      ), url("img/background.png");
+background-size: contain;
+background-attachment: fixed;
+background-repeat: repeat;*/ 
 }
  #associatifs {
   position: relative;   
@@ -1962,7 +1971,7 @@ background-position: top center;
   flex-direction: row;  
   justify-content: space-evenly;  
   max-width: 100%;
-  padding: 0 20px;
+  padding: 50px 20px;
   align-items: center;
   background-size: cover;
 background-attachment: fixed;
@@ -2389,7 +2398,17 @@ text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
       );
 background-size: contain;
 background-repeat: repeat;
-padding: 50px 0;
+padding: 25px 0;
+}
+#don {  
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+ background-image: none;
+  
+padding: 25px 0;
 }
 #adhesion h1{
   width: 90%;
@@ -2399,8 +2418,7 @@ padding: 50px 0;
   text-align: center; 
    margin: 25px auto;
  font-size: 3em;
-    font-family: 'Pirata One', Helvetica, Arial, sans-serif;
- 
+    font-family: 'Pirata One', Helvetica, Arial, sans-serif; 
 }
 #adhesion h2{
   width: 90%;
@@ -2409,8 +2427,18 @@ padding: 50px 0;
   justify-content: space-around;  
   text-align: center; 
    margin: 25px auto;
+  font-size: 1.5em; 
+}
+#don h2{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  
+  text-align: center; 
+   margin: 25px auto;
   font-size: 1.5em;
- ;
+  color: black;
+ 
 }
 .adhesionrow {
   display: flex;
@@ -2436,7 +2464,7 @@ padding: 50px 0;
     width: 40%;
     margin: auto;
 }
-#adhesionrow1 p, #adhesionrow2 p, #adhesionrow3 p, #adhesionrow4 p { 
+#adhesionrow1 p, #adhesionrow2 p, #adhesionrow3 p { 
 background-size: contain;
 background-attachment: fixed;
 background-repeat: repeat;
@@ -2445,7 +2473,20 @@ border-radius: 30px;
 padding: 25px; 
 font-size: 0.8em;
 background-image: linear-gradient(
-        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.95), 
+        rgba(8, 92, 116, 0.95)
+      ), url("img/background.png"); 
+}
+#adhesionrow4 p { 
+background-size: contain;
+background-attachment: fixed;
+background-repeat: repeat;
+background-position: top center;
+border-radius: 30px;
+padding: 25px; 
+font-size: 0.8em;
+background-image: linear-gradient(
+        rgba(255, 255, 255, 0.75), 
         rgba(8, 92, 116, 0.75)
       ), url("img/background.png"); 
 }
@@ -2457,10 +2498,14 @@ background-image: linear-gradient(
  }
  #adhesionrow4 a {
   text-decoration: none;
-  color: blue;
+  color: white;
   font-size: 1em; 
 -webkit-text-stroke: 0.5px white; 
 margin-left: 5px;
+ }
+ #adhesionrow4 span {
+  font-style: italic;
+  font-size: 1.25em;
  }
 /*///////////////////////////////////////SENSIBILISATION//////////////////////////////*/
 
