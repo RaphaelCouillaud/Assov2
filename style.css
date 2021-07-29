@@ -1954,10 +1954,23 @@ backdrop-filter: blur( 4px );
   background-size: cover;
 background-attachment: fixed;
 background-repeat: repeat;
+background-position: top center;  
+}
+ #associatifs {
+  position: relative;   
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-evenly;  
+  max-width: 100%;
+  padding: 0 20px;
+  align-items: center;
+  background-size: cover;
+background-attachment: fixed;
+background-repeat: repeat;
 background-position: top center;
   
 }
-#intromairies, #introprives {
+#intromairies, #introprives, #introassociatifs {
   width: 25%;
   margin: auto;
   padding: 0;
@@ -1973,20 +1986,20 @@ text-orientation: upright;*/
   color: black;
   width: 100%;
 }
-#introprives h2{  
+#introprives h2, #introassociatifs h2 {  
   font-family: 'Pirata One', Helvetica, Arial, sans-serif;
  font-size: 3em;
   color: white;
   width: 100%;
 }
-#divmairies, #divprives{
+#divmairies, #divprives, #divassociatifs{
   width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.linksmairies, .linksprives {
+.linksmairies, .linksprives, .linksassociatifs {
   width: 20%;
    height: auto;
   display: flex;
@@ -1997,17 +2010,17 @@ text-orientation: upright;*/
   align-items: center;  
   margin: 5px auto;
 }
-.linksmairies a, .linksprives a {
+.linksmairies a, .linksprives a, .linksassociatifs a {
   margin: auto;   
   object-fit: cover;
 }
-.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img {
+.linksmairies h3, .linksmairies img, .linksprives h3, .linksprives img, .linksassociatifs h3, .linksassociatifs img{
   margin: auto;
   text-align: center; 
   width: 150px;
   object-fit: cover;
 } 
-.linksmairies a:hover, .linksprives a:hover{
+.linksmairies a:hover, .linksprives a:hover, .linksassociatifs a:hover {
  transform: scale(1.1);
  transition: all 0.35s ease-in-out; 
 }
@@ -3293,13 +3306,13 @@ flex-direction: column;
   margin: 0 auto;
   padding-top: 50px;
 }
-#mairies, #prives {  
+#mairies, #prives, #associatifs {  
   flex-direction: column;  
 }
-#intromairies, #introprives {
+#intromairies, #introprives, #introassociatifs {
   width: 100%;  
 }
-#divmairies, #divprives {
+#divmairies, #divprives, #divassociatifs {
   width: 90%;
 }
 #sectiontv {
