@@ -996,6 +996,9 @@ form {
     width: 75%; 
     margin: auto;
 }
+footer { 
+  background-position: top center;
+}
 }
 
  
@@ -1292,6 +1295,10 @@ label, input, textarea {
   margin-top: 15px;
   font-size: 1.5em;
 }
+footer { 
+  background-size: 400%;
+  background-position: 25% -10%;
+}
 }
 /*------------------------------------------------------420---------------*/
 /*--------------------------------------------------------------------------*/
@@ -1395,6 +1402,10 @@ figure {
 .slidenav {    
     bottom: 5px;
 }
+footer { 
+  background-size: 420%;
+  background-position: 25% 0%;
+}
 }
 
 /*------------------------------------------------------360---------------*/
@@ -1467,6 +1478,10 @@ form h2 {
   width: 40px;
   object-fit: cover;
 } 
+footer { 
+  background-size: 450%;
+  background-position: 25% 0%;
+}
 }
 /*------------------------------------------------------320---------------*/
 /*--------------------------------------------------------------------------*/

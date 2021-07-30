@@ -2395,7 +2395,6 @@ text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
       );
 background-size: contain;
 background-repeat: repeat;
-padding: 25px 0;
 }
 #don {  
   display: flex;
@@ -2404,8 +2403,8 @@ padding: 25px 0;
   justify-content: center;
   align-items: center;
  background-image: none;
-  
-padding: 25px 0;
+  color: black;
+font-weight: 100px;
 }
 #adhesion h1{
   width: 90%;
@@ -2417,25 +2416,30 @@ padding: 25px 0;
  font-size: 3em;
     font-family: 'Pirata One', Helvetica, Arial, sans-serif; 
 }
-#adhesion h2{
+#adhesion h2, #don h2{
   width: 90%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;  
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;  
   text-align: center; 
    margin: 25px auto;
   font-size: 1.5em; 
+  flex-wrap: wrap;
 }
-#don h2{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;  
-  text-align: center; 
-   margin: 25px auto;
-  font-size: 1.5em;
-  color: black;
- 
+#adhesion h2 i{  
+  font-size: 4em; 
+  margin: 10px;
+ -webkit-text-stroke: 4px black; 
+ transform: rotate(350deg);
+}
+#don h2 i{  
+  font-size: 4em; 
+  margin: 10px;
+ -webkit-text-stroke: 4px white; 
+ transform: rotate(350deg);
+ color: #085c74;
 }
 .adhesionrow {
   display: flex;
@@ -2446,7 +2450,7 @@ padding: 25px 0;
   align-content: center;
 }
 .adhesionrow h3{
-   font-size: 1.25em;
+   font-size: 1.75em;
    font-style: italic;
 }
 .adhesionrow h3 img{
@@ -2460,39 +2464,42 @@ padding: 25px 0;
   flex-wrap: wrap;
     width: 40%;
     margin: auto;
+    text-align: center;
 }
 #adhesionrow1 p, #adhesionrow2 p, #adhesionrow3 p { 
+  font-size: 1.1em;
 background-size: contain;
 background-attachment: fixed;
 background-repeat: repeat;
 background-position: top center;
 border-radius: 30px;
 padding: 25px; 
-font-size: 0.8em;
+background-image: linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(8, 92, 116, 0.75)
+      ), url("img/background.png"); 
+}
+#adhesionrow4 p { 
+   font-size: 1.1em;
+   color: white;
+background-size: contain;
+background-attachment: fixed;
+background-repeat: repeat;
+background-position: top center;
+border-radius: 30px;
+padding: 25px; 
 background-image: linear-gradient(
         rgba(0, 0, 0, 0.95), 
         rgba(8, 92, 116, 0.95)
       ), url("img/background.png"); 
 }
-#adhesionrow4 p { 
-background-size: contain;
-background-attachment: fixed;
-background-repeat: repeat;
-background-position: top center;
-border-radius: 30px;
-padding: 25px; 
-font-size: 0.8em;
-background-image: linear-gradient(
-        rgba(255, 255, 255, 0.75), 
-        rgba(8, 92, 116, 0.75)
-      ), url("img/background.png"); 
-}
  #adhesionrow3 a {
   text-decoration: none;
   color: white;
-  font-size: 2em; 
+  font-size: 4em; 
 -webkit-text-stroke: 1px red; 
  }
+
  #adhesionrow4 a {
   text-decoration: none;
   color: white;
@@ -2861,15 +2868,15 @@ form h4, form p {
 }
 
 footer {   
-min-height: 300px;
+min-height: 310px;
 display: flex;
 text-align: center;
 position: relative;
 padding-top: 50px;
 position: relative;
 overflow-x: hidden;
-background-color: #b8ecf4;
-  
+background-image: url("img/skyline.png");
+  background-position: top center;
 }
 footer p {
 color: white;
