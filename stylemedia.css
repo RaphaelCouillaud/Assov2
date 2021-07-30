@@ -315,6 +315,7 @@ flex-direction: column;
 }
 #mairies, #prives, #associatifs {  
   flex-direction: column;  
+  padding: 50px 10px;
 }
 #intromairies, #introprives, #introassociatifs {
   width: 100%;  
@@ -391,7 +392,7 @@ form {
     width: 100%;   
   }
   #actioncounter {   
-  top: 95%; 
+  top: 90%; 
 }
   #logo {
   height: 150px;   
@@ -717,14 +718,7 @@ margin: 0 auto;
   flex-direction: column; 
   justify-content: space-between; 
   width: 100%;
-    background-image: linear-gradient(270deg,
-         rgba(8, 92, 116, 0.85), 
-        rgba(255, 255, 255, 0.85)
-      ), url("img/background.png"); 
-background-size: cover;
-background-attachment: fixed;
-background-repeat: repeat;
-background-position: top center;
+  
 padding: 50px 0;
 }
 .middle-faq {
@@ -748,6 +742,7 @@ padding: 50px 0;
 .middle-faq h1 {
 writing-mode: horizontal-tb;
 text-orientation: upright;
+text-align: center;
 }
 .middle-faq i:nth-child(1) {
   transform: rotate(180deg)
@@ -1125,6 +1120,9 @@ max-width: 100%;
 h1 {
   width: 80%;
 }
+#actioncounter {   
+  top: 60%; 
+}
 .op-text h3 {
   padding-top: 40px;
 }
@@ -1292,7 +1290,7 @@ label, input, textarea {
   animation: defil 40s infinite linear;
 }
 #socialnetworks li p {
-  margin-top: 15px;
+  margin-top: 40px;
   font-size: 1.5em;
 }
 footer { 
@@ -1303,12 +1301,12 @@ footer {
 /*------------------------------------------------------420---------------*/
 /*--------------------------------------------------------------------------*/
 @media screen and (max-width: 420px) {
-  #recruit, #juillet18 {
+  #recruit, #juillet18, , #juillet14 {
   display: flex;
   flex-direction: column;  
   margin-bottom: 0px;
 }
-#recruit img, #juillet18 img {
+#recruit img, #juillet18 img, , #juillet14 img {
   margin: auto;
   
   width: 200px;
