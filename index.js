@@ -12,7 +12,7 @@ let turtle = document.getElementById('turtle');
 let fish = document.getElementById('fish');
 let piles1 = document.getElementById('piles1');
 let piles2 = document.getElementById('piles2');
-let water = document.getElementById('water');
+
 
 window.addEventListener('scroll', () => {
  let value = window.scrollY;
