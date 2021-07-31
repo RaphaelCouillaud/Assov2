@@ -1,39 +1,28 @@
 // PARALLAX SCROLL HEADER //
-let header = document.getElementById('header');
+
 let text = document.getElementById('text');
-let bird1 = document.getElementById('bird1');
-let bird2 = document.getElementById('bird2');
+
 let butterflies = document.getElementById('butterflies');
 let butterflies1 = document.getElementById('butterflies1');
-let cloud1 = document.getElementById('cloud1');
-let cloud2 = document.getElementById('cloud2');
-let sun = document.getElementById('sun');
+
 let back = document.getElementById('back');
 let actioncounter = document.getElementById('actioncounter');
+
 let plants = document.getElementById('plants');
 let turtle = document.getElementById('turtle');
 let fish = document.getElementById('fish');
 let piles1 = document.getElementById('piles1');
 let piles2 = document.getElementById('piles2');
-let water = document.getElementById('water');
-let watermedia = document.getElementById('watermedia');
+
 
 window.addEventListener('scroll', () => {
  let value = window.scrollY;
- header.style.top = value * -0.5 + 'px';
+ 
  text.style.top = 50 + value * -0.5 + '%';
- bird1.style.top = value * -1.5 + 'px';
- bird1.style.left = value * -2 + 'px';
- bird2.style.top = value * -1.5 + 'px';
- bird2.style.left = value * 5 + 'px';
  butterflies.style.top = value * -1 + 'px';
  butterflies.style.left = value * 1 + 'px';
  butterflies1.style.top = value * -1.02 + 'px';
  butterflies1.style.left = value * 1.025 + 'px';
- cloud1.style.left = value * -2 + 'px';
- cloud2.style.left = value * 5 + 'px';
- sun.style.left = value * -0.5 + 'px';
- sun.style.top = value * 0.25 + 'px';
  actioncounter.style.marginTop = value * -0.025 + 'px';
  back.style.top = value * -0.15 + 'px';
  plants.style.top = value * 0.025 + 'px';
