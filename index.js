@@ -16,6 +16,7 @@ let piles2 = document.getElementById('piles2');
 
 window.addEventListener('scroll', () => {
  let value = window.scrollY;
+ 
  header.style.top = value * -0.5 + 'px';
  text.style.top = 50 + value * -0.5 + '%';
  butterflies.style.top = value * -1 + 'px';
