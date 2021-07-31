@@ -1,5 +1,5 @@
 // PARALLAX SCROLL HEADER //
-let header = document.getElementById('header');
+
 let text = document.getElementById('text');
 
 let butterflies = document.getElementById('butterflies');
@@ -7,6 +7,7 @@ let butterflies1 = document.getElementById('butterflies1');
 
 let back = document.getElementById('back');
 let actioncounter = document.getElementById('actioncounter');
+
 let plants = document.getElementById('plants');
 let turtle = document.getElementById('turtle');
 let fish = document.getElementById('fish');
@@ -16,8 +17,8 @@ let piles2 = document.getElementById('piles2');
 
 window.addEventListener('scroll', () => {
  let value = window.scrollY;
+
  
- header.style.top = value * -0.5 + 'px';
  text.style.top = 50 + value * -0.5 + '%';
  butterflies.style.top = value * -1 + 'px';
  butterflies.style.left = value * 1 + 'px';
