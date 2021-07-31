@@ -2507,10 +2507,47 @@ background-image: linear-gradient(
 -webkit-text-stroke: 0.5px white; 
 margin-left: 5px;
  }
- #adhesionrow4 span {
-  font-style: italic;
-  font-size: 1.25em;
- }
+
+#loading i {
+  margin: 0 10px;
+  font-size: 1.75em;
+-webkit-text-stroke: 1.5px white;
+animation: disappear 2s both infinite;  
+    -moz-animation: disappear 2s both infinite; 
+  -webkit-animation: disappear 2s both infinite; 
+  -o-animation: disappear 2s both infinite; 
+  -ms-animation: disappear 2s both infinite;   
+}
+#loading i:nth-child(2) {
+animation-delay: 0.2s;  
+}
+#loading i:nth-child(3) {
+animation-delay: 0.3s;  
+}
+#loading i:nth-child(4) {
+animation-delay: 0.4s;  
+}
+#loading i:nth-child(5) {
+animation-delay: 0.5s;  
+}
+#loading i:nth-child(6) {
+animation-delay: 0.6s;  
+}
+#loading i:nth-child(7) {
+animation-delay: 0.7s;  
+}
+@keyframes disappear {
+  0% {
+      opacity: .2;
+    }
+    20% {
+      opacity: 1;
+      text-shadow: 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 35px white, 0 0 50px white, 0 0 70px white;
+    }
+    100% {
+      opacity: .2;
+    }
+}
 /*///////////////////////////////////////SENSIBILISATION//////////////////////////////*/
 
 #sensibilisation1, #sensibilisation2, #sensibilisation3, #sensibilisation4 {
