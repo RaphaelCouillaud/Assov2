@@ -8,9 +8,7 @@ let butterflies1 = document.getElementById('butterflies1');
 let back = document.getElementById('back');
 let actioncounter = document.getElementById('actioncounter');
 
-
-
-
+let plants = document.getElementById('plants');
 
 
 
@@ -25,9 +23,7 @@ window.addEventListener('scroll', () => {
  butterflies1.style.left = value * 1.025 + 'px';
  actioncounter.style.marginTop = value * -0.025 + 'px';
  back.style.top = value * -0.15 + 'px';
- 
- 
- 
+ plants.style.top = value * 0.025 + 'px';
  
  });
 // PARALLAX PORTRAIT SCROLL HEADER //
