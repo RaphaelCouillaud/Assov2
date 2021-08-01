@@ -641,24 +641,26 @@ align-items: center;
     line-height: 1.5;
     font-size: 1.25em;
     text-align: justify;
+    margin: auto;
 }
-#recruit, #juillet18, #juillet14 {
+#recruit, #juillet18, #juillet14, #juin24, #juillet22 {
   display: flex;
   flex-direction: row-reverse;  
   margin-bottom: 15px;
   justify-content: space-between;
 }
-#recruit img, #juillet18 img, #juillet14 img {
+
+#recruit img, #juillet18 img, #juillet14 img, #juin24 img, #juillet22 img {
   margin: auto;
   margin-right: 25px;
   width: 200px;
   object-fit: cover;
   transition: 0.5s ease-in-out;
 }
-#recruit img:hover, #juillet18 img:hover, #juillet14 img:hover {
+#recruit img:hover, #juillet18 img:hover, #juillet14 img:hover, #juin24 img:hover, #juillet22 img:hover {
   transform: scale(1.33);
 }
-#recruit h3, #juillet18 h3, #juillet14 h3 {
+#recruit h3, #juillet18 h3, #juillet14 h3, #juin24 h3, #juillet22 h3 {
   margin: auto;
 }
 

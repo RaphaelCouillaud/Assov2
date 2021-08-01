@@ -393,6 +393,7 @@ form {
   }
   #actioncounter {   
   top: 90%; 
+  z-index: 1;
 }
   #logo {
   height: 150px;   
@@ -992,7 +993,9 @@ form {
     margin: auto;
 }
 footer { 
-  background-position: top center;
+ background-size: 150%;
+  
+  background-position: 45% 20%;
 }
 }
 
@@ -1034,6 +1037,11 @@ padding: 25px 0;
 .option-action img {  
   width: 80px;
 }
+footer { 
+ background-size: 200%;
+  
+  background-position: 35% 20%;
+}
 }
 /*------------------------------------------------------568---------------*/
 /*--------------------------------------------------------------------------*/
@@ -1045,6 +1053,17 @@ padding: 25px 0;
 .op-text h3 {
   padding-top: 50px;
   font-size: 2.5em;
+}
+  #recruit, #juillet18, #juillet14, #juin24, #juillet22 {
+  display: flex;
+  flex-direction: column;  
+  margin-bottom: 0px;
+}
+#recruit img, #juillet18 img, #juillet14 img, #juin24 img, #juillet22 img {
+  margin: auto; 
+  width: 200px;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
 }
  #counter-up {
   min-height: 25vh;  
@@ -1294,25 +1313,15 @@ label, input, textarea {
   font-size: 1.5em;
 }
 footer { 
-  background-size: 400%;
-  background-position: 25% -10%;
+ background-size: 240%;
+  
+  background-position: 25% 25%;
 }
 }
 /*------------------------------------------------------420---------------*/
 /*--------------------------------------------------------------------------*/
 @media screen and (max-width: 420px) {
-  #recruit, #juillet18, , #juillet14 {
-  display: flex;
-  flex-direction: column;  
-  margin-bottom: 0px;
-}
-#recruit img, #juillet18 img, , #juillet14 img {
-  margin: auto;
-  
-  width: 200px;
-  object-fit: cover;
-  transition: 0.5s ease-in-out;
-}
+
 #intro, #intro p {  
     margin-bottom: 5px;
 }
@@ -1401,8 +1410,8 @@ figure {
     bottom: 5px;
 }
 footer { 
-  background-size: 420%;
-  background-position: 25% 0%;
+  background-size: 300%;
+  background-position: 30% 25%;
 }
 }
 
@@ -1477,8 +1486,8 @@ form h2 {
   object-fit: cover;
 } 
 footer { 
-  background-size: 450%;
-  background-position: 25% 0%;
+  background-size: 400%;
+  background-position: 25% 10%;
 }
 }
 /*------------------------------------------------------320---------------*/
