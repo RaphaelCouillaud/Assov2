@@ -9,7 +9,10 @@ let back = document.getElementById('back');
 let actioncounter = document.getElementById('actioncounter');
 
 let plants = document.getElementById('plants');
-
+let turtle = document.getElementById('turtle');
+let fish = document.getElementById('fish');
+let piles1 = document.getElementById('piles1');
+let piles2 = document.getElementById('piles2');
 
 
 window.addEventListener('scroll', () => {
@@ -17,14 +20,17 @@ window.addEventListener('scroll', () => {
 
  
  text.style.top = 50 + value * -0.5 + '%';
- butterflies.style.top = value * -1 + 'px';
- butterflies.style.left = value * 1 + 'px';
- butterflies1.style.top = value * -1.02 + 'px';
- butterflies1.style.left = value * 1.025 + 'px';
+ butterflies.style.top = value * -0.5 + 'px';
+ butterflies.style.left = value * 0.5 + 'px';
+ butterflies1.style.top = value * -0.5 + 'px';
+ butterflies1.style.left = value * 0.5 + 'px';
  actioncounter.style.marginTop = value * -0.025 + 'px';
  back.style.top = value * -0.15 + 'px';
  plants.style.top = value * 0.025 + 'px';
- 
+ fish.style.left = value * 0.55 + 'px';
+ turtle.style.left = value * -0.5 + 'px';
+ piles1.style.left = value * -0.5 + 'px';
+ piles2.style.left = value * 0.5 + 'px'; 
  });
 // PARALLAX PORTRAIT SCROLL HEADER //
 
